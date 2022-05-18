@@ -3,8 +3,7 @@
   hosts: all
   connection: local
   tasks:
-    - name: SHOW VERSION
-  cisco.ios.ios_command:
-  provider : "{cli}"
-  commands: "show version"
-  register: output
+   - name: SHOW VERSION
+     ios_command:
+         commands: "show version"
+     register: output
