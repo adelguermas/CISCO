@@ -1,10 +1,7 @@
 ---
-- name:  show ver 
+- name:  show version
   hosts: all
   connection: local
-
-  
-
   tasks:
     - name: SHOW VERSION
   cisco.ios.ios_command:
