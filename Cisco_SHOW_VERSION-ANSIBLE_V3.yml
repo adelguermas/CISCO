@@ -10,7 +10,7 @@
     timeout : 100
 
   tasks:
-   - name: SHOW VERSION
+   - name: cisco_sh_ver
      ios_command:
          commands:"show version"
      register: output
