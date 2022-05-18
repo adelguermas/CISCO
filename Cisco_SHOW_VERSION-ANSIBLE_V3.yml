@@ -12,7 +12,6 @@
   tasks:
    - name: SHOW VERSION
      ios_command:
-         commands:
-         - show version
+         commands:"show version"
      register: output
      provider : "{cli}"
