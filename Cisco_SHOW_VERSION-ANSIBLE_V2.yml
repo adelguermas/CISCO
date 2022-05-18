@@ -3,16 +3,11 @@
   hosts: all
   connection: local
 
-  vars:
-     cli:
-     username: admin
-     password : cisco
-     timeout : 100
+  
 
   tasks:
-   - name: run show version
-     cisco.ios.ios_command:
-       commands:
-         - show version
-     provider : "{cli}"
-     register: output
+    - name: SHOW VERSION
+  cisco.ios.ios_command:
+  provider : "{cli}"
+  commands: "show version"
+  register: output
