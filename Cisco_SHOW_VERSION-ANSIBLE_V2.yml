@@ -10,9 +10,9 @@
      timeout : 100
 
   tasks:
-  - name: run show version
-    cisco.ios.ios_command:
-     provider : "{cli}"
-     commands:
+   - name: run show version
+     cisco.ios.ios_command:
+       commands:
          - show version
+     provider : "{cli}"
      register: output
