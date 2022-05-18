@@ -1,0 +1,18 @@
+---
+- name: cisco_sh_ver
+  hosts: all
+  gather_facts: true 
+  
+  vars:
+     cli:
+	   username: admin
+	   password : cisco
+	   timeout : 100 
+  
+  tasks:
+   - name: run show version on remote devices
+     cisco.ios.ios_command:
+       provider : "{cli}"
+	   commands:
+         - show version
+     register: output    
