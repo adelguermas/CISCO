@@ -7,6 +7,6 @@
    - name: Save your show command to register
      ios_command:
       commands:
-        -show mac address-table dynamic
+        - show mac address-table dynamic
      register: output
    - debug: var=output.stdout_lines
