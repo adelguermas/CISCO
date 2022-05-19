@@ -4,14 +4,14 @@
   connection: local
 
   vars:
-    cli:
-    username: "admin"
-    password : "cisco"
-    timeout : 100
+  cli:
+  username: admin
+  password : cisco
+  timeout : 100
 
   tasks:
-   - name: cisco_sh_ver
-     ios_command:
-         commands:"show version"
-     register: output
-     provider : "{cli}"
+  - name: cisco_sh_ver
+  ios_command:
+   commands:"show version"
+  register: output
+  provider : "{cli}"
