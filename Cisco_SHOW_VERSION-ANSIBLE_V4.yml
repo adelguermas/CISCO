@@ -3,11 +3,16 @@
   hosts: all
   connection: local
   
+  vars:
+     cli:
+     username: admin
+     password : cisco
+     timeout : 100
+  
   tasks:
     - name: run show version on remote devices
-      register: showverout
+      register: print_output
       ios_command:
-        commands: show version 
-          timeout:100
-
+        commands: show version
+        provider : "{cli}"
 
