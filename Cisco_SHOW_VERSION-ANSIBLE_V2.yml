@@ -1,9 +1,10 @@
 ---
 - name:  show version
-  hosts: all
+  hosts: CISCO1
   connection: local
   tasks:
    - name: SHOW VERSION
      ios_command:
          commands: "show version"
      register: output
+      
