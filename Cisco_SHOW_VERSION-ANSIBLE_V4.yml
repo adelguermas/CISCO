@@ -1,12 +1,19 @@
 ---
 - name: show ver
-  hosts: all
+  hosts: CISCO1
   connection: local
   gather_facts: true
+  
+  vars:
+    ansible_persistent_log_messages: True
+    username: admin
+	  password : cisco
+  
   tasks:
     - name: run show version on remote devices
       register: version
       ios_command:
-          commands: show version
+          commands: 
+            - show version
 
     
