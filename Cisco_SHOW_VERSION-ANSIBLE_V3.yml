@@ -1,7 +1,8 @@
 ---
-- name: cisco_sh_ver
+- name: show ver
   hosts: all
   connection: local
+  gather_facts: true
 
   vars:
   cli:
