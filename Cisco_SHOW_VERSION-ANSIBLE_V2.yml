@@ -1,6 +1,6 @@
 ---
 - name:  show version
-  hosts: CISCO1
+  hosts: all
   connection: local
   tasks:
    - name: SHOW VERSION
