@@ -5,6 +5,6 @@
   tasks:
    - name: config  hostname
      config:
-         hostname: "Switch-Adel"
+         hostname: Switch-Adel
      register: output
    - debug: var=output.stdout_lines
