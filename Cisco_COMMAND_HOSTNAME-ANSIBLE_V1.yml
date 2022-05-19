@@ -6,7 +6,4 @@
    - name: config  hostname
      ios_config:
          hostname: Switch-Adel
-   - name: save config
-     ios_config:
-       authorize: yes
-       save: yes
+   
