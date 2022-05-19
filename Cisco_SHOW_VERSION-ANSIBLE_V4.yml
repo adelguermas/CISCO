@@ -1,6 +1,6 @@
 ---
 - name: show ver
-  hosts: CISCO1
+  hosts: all
   connection: local
   gather_facts: false
   
