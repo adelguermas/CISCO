@@ -2,17 +2,10 @@
 - name: show ver
   hosts: all
   connection: local
-  
-  vars:
-     cli:
-     username: admin
-     password : cisco
-     timeout : 100
-  
   tasks:
     - name: run show version on remote devices
-      register: print_output
+      register: showverout
       ios_command:
         commands: show version
-        provider : "{cli}"
 
+    - debug: var=showverout.stdout_lines
