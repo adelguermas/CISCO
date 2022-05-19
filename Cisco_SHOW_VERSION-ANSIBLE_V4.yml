@@ -1,0 +1,13 @@
+---
+- name: show ver
+  hosts: all
+  connection: local
+  
+  tasks:
+    - name: run show version on remote devices
+      register: showverout
+      ios_command:
+        commands: show version 
+          timeout:100
+
+
