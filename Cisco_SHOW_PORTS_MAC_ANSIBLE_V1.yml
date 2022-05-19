@@ -1,0 +1,12 @@
+---
+- name: Get port details and MAC-addresses
+  hosts: all
+  connection: local
+  
+  tasks:
+   - name: Save your show command to register
+     ios_command:
+      commands:
+        -show mac address-table dynamic
+     register: output
+   - debug: var=output.stdout_lines
