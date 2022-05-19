@@ -1,0 +1,10 @@
+---
+- name:  config  hostname
+  hosts: all
+  connection: local
+  tasks:
+   - name: config  hostname
+     config:
+         hostname: "Switch-Adel"
+     register: output
+   - debug: var=output.stdout_lines
