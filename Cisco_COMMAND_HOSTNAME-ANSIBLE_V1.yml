@@ -4,6 +4,6 @@
   connection: local
   tasks:
    - name: config  hostname
-     ios_config:
+     cisco.ios.ios_config:
          hostname: Switch-Adel
    
