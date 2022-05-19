@@ -4,7 +4,6 @@
   connection: local
   tasks:
    - name: config  hostname
-     ios_hostname:
-     config:
+     ios_config:
          hostname: Switch-Adel
            state:merged
